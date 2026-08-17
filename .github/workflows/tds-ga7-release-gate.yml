@@ -14,6 +14,6 @@ jobs:
 
       - name: "Test Hosted Release Gate API"
         run: |
-          curl -f -X POST "https://tds-roe-solver-api-t12026.onrender.com/ga7/23f2004096%40ds.study.iitm.ac.in/release-gate" \
+          curl -f -X POST "https://ga6-q1-workflow.onrender.com/release-gate" \
             -H "Content-Type: application/json" \
             -d '{"target":"preview","event":"pull_request","ref":"refs/heads/feature","workflow":{"trigger":"pull_request","permissions":{"contents":"read","packages":"write","id-token":"none"},"testsPassed":true,"matrixComplete":true,"failFast":false,"actions":[{"owner":"actions","name":"checkout","ref":"v4"}],"environmentApproval":true},"image":{"multiStage":true,"runsAsRoot":false,"secretMode":"none","criticalVulnerabilities":0,"digestPinned":true}}'
